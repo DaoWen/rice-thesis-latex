@@ -1,0 +1,18 @@
+# ignore generated pdfs docs and images
+*.pdf
+*.eps
+*.png
+!/logos/*
+
+# ignore latex generated files
+*.aux
+*.log
+thesis_main.*
+!*.tex
+!*.bib
+
+# ignore vim and emacs swap files
+*.swp
+
+# ignore mac os meta files
+.DS_Store

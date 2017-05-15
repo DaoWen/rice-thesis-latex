@@ -1,0 +1,173 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Analysis}
+\label{chap:analysis}
+
+To figure out if this is plausible,
+we can start with an absolute baseline energy requirement:
+four gigajoules per person.
+%
+No matter how we do it,
+whether we use rockets or a cannon or a space elevator,
+moving a 65-kilogram person---or 65 kilograms of anything---%
+out of the Earth's gravity well requires at least this much energy.
+
+\begin{equation*}
+\text{Gravitational potential energy} = \frac{1}{2} \times 65\mathrm{kg} \times \text{(Earth escape velocity)}^{2}
+\end{equation*}
+
+The energy required to lift something away from the Earth
+is equal to its kinetic energy if it were moving at Earth's escape velocity.
+
+How much is four gigajoules?
+It's about a megawatt-hour,
+which is what a typical US household consumes in electricity in a month or two.
+It's the amount of stored energy in a cargo van full of AA batteries or 90 kg of gasoline.
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=\textwidth]{figs/everybody_out_cargo_van.png}
+\caption{
+    An avalanche of batteries falling out of the open back of a cargo van.
+}
+\label{fig:battery-van}
+\end{figure}
+
+Four gigajoules times seven billion people gives us
+$2.8 \times 10^{18}$ joules, or 8 petawatt-hours.
+This is about five percent of the world's annual energy consumption.
+A lot, but not impossible.
+
+But this is just a minimum.
+In practice, everything depends on our means of transportation.
+If we're using rockets, it's going to take a lot more.
+This is because of a fundamental problem with rockets:
+they have to lift their own fuel.
+
+Let's return for a moment to those 90 kilograms of gasoline (about 30 gallons),
+because they help illustrate a central problem in space travel.
+If we want to launch a 65-kilogram spaceship,
+we need to burn around 90 kilograms of fuel.
+(Gasoline has an energy per pound comparable to that of rocket fuel,
+so we'll stick with that example).
+We load that fuel on board---and now our spaceship weighs 155 kilograms.
+A 155-kilogram spaceship requires 215 kilograms of fuel,
+so we load another 125 kilograms on board\dots
+
+Fortunately, we're saved from an infinite loop---%
+where we add 1.3 kilograms for every 1 kilogram we add---%
+by the fact that we don't have to carry that fuel all the way up.
+We burn it as we go, so we get lighter and lighter,
+which means we need less and less fuel.
+But we do have to lift the fuel partway.
+The formula for how much propellant we need to burn to get moving
+at a given speed is given by the Tsiolkovsky Rocket equation~\cite{weisstein}:
+
+\begin{equation*}
+\Delta v = v_\text{exhaust} \ln \frac {m_\text{start}} {m_\text{end}}
+\end{equation*}
+
+$m_\text{start}$ and $m_\text{end}$
+are the total mass of the ship+fuel before and after the burn,
+and $v_\text{exhaust}$ is the ``exhaust velocity'' of the fuel,
+a number that's between 2.5-4.5 km/s for rocket fuels.
+
+What's important is the ratio between $\Delta v$ and $v_\text{exhaust}$---%
+the speed we want to be going compared to the speed that the propellant exits our rocket.
+The kilograms of fuel needed per kilogram of ship is $e$ to the power of this number,
+which gets big very fast.
+For leaving Earth, we need a $\Delta v$ of upwards of 13 km/s,
+and $v_\text{exhaust}$ isn't much higher than 4.5 km/s,
+which gives a fuel-to-ship ratio of at least $\text{e}^{\frac{13}{4.5}} \approx 20$.
+
+The upshot is that to overcome Earth's gravity using traditional rocket fuels,
+a one-ton craft needs 20 to 50 tons of fuel.
+Launching all of humanity (total weight: around 400 million tons)
+would therefore take tens of trillions of tons of fuel.
+That's a lot; if we were using hydrocarbon-based fuels,
+it would represent a decent chunk of the world's remaining oil reserves.
+And that's not even worrying about the weight of the ship itself, food, water, or our pets
+(there are probably around a million tons of pet dog in the US alone).
+We'd also need fuel to produce all these ships,
+to transport people to the launch sites, and so forth.
+It's not necessarily completely impossible,
+but it's certainly outside the realm of plausibility.
+
+But rockets aren't our only option.
+As crazy as it sounds, we might be better off trying to
+%
+\begin{enumerate*}[label=(\arabic*)]
+\item literally climb into space on a rope
+      (see \cref{fig:alternatives:elevator}), or
+\item blow ourselves off the planet with nuclear weapons
+      (see \cref{fig:alternatives:nuke}).
+\end{enumerate*}
+%
+These are actually serious---if audacious---ideas for launch systems,
+both of which have been bouncing around since the start of the Space Age.
+
+\begin{figure}[p]
+\centering
+  \begin{subfigure}[b]{\linewidth}
+  \centering
+  \includegraphics{figs/everybody_out_elevator.png}
+  \caption{Two figures climbing a rope off the earth.}
+  \label{fig:alternatives:elevator}
+  \end{subfigure}
+  \begin{subfigure}[b]{\linewidth}
+  \centering
+  \includegraphics{figs/everybody_out_nuke.png}
+  \caption{An exploded earth with a craft flying off of it.}
+  \label{fig:alternatives:nuke}
+  \end{subfigure}
+  \vspace*{1em}
+\caption{
+    Alternative options to using rockets.
+}
+\label{fig:alternatives}
+\end{figure}
+
+The first approach is the ``space elevator'' concept,
+a favorite of science fiction authors.
+The idea is that we connect a tether to a satellite orbiting
+far enough out that the tether is held taut by centrifugal force.
+Then we can send climbers up the rope using ordinary electricity and motors,
+powered by solar power, nuclear generators, or whatever works best.
+%
+The biggest engineering hurdle is that the tether
+would have to be several times stronger than anything we can currently build.
+There are hopes that carbon nanotube-based materials
+could provide the required strength---adding this
+to the long list of engineering problems
+which can be waved away by tacking on the prefix ``nano-''.
+
+The second approach is nuclear pulse propulsion~\cite{schmidt2000nuclear},
+a surprisingly plausible method
+for getting huge amounts of material moving really fast.
+The basic idea is that you toss a nuclear bomb behind you and ride the shockwave.
+%
+You'd think the spacecraft would be vaporized,
+but it turns out that if it has a well-designed shield,
+the blast flings away before it has a chance to disintegrate.
+If it could be made reliable enough,
+this system would in theory be capable of lifting entire city blocks into orbit,
+and could---potentially---accomplish our goal.
+
+The engineering principles behind this were solid enough that in the 1960s,
+under the guidance of Freeman Dyson,
+the US government actually tried to build one of these spaceships.
+The story of that effort, dubbed Project Orion,
+is detailed in the excellent book of the same name
+by Freeman's son George Dyson~\cite{Dyson:2002}.
+%
+Advocates for nuclear pulse propulsion are still disappointed
+that the project was cancelled before any prototypes were built.
+Others argue that when you think about what they were trying to do---%
+put our entire nuclear arsenal in a box,
+hurl it high into the atmosphere, and nuke it repeatedly---%
+it's terrifying that it got as far as it did.
+
+So the answer is that while sending one person into space is easy,
+getting all of us there would tax our resources
+to the limit and possibly destroy the planet.
+It's a small step for a man, but a giant leap for mankind.
