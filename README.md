@@ -3,7 +3,7 @@
 ## Building via the command line
 
 There are several tools for automatically compiling LaTeX projects into PDFs.
-We recommend using the thesis PDF using `latexmk`,
+We recommend building the thesis PDF using `latexmk`,
 which comes with most TexLive distributions.
 
 ### Build
